@@ -1,0 +1,199 @@
+header {
+    text-align: center;
+}
+
+#center {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    margin-left: -80px;
+}
+
+
+/*transition动画
+#box{
+	 -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: transform 3s linear;
+}
+#box:hover{
+	transform:rotateY(90deg) rotateX(90deg);
+}*/
+
+#box {
+    /*-webkit-perspective:200;
+	-webkit-perspective-origin:25% 75%;
+	perspective-origin:25% 75%;*/
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    /*设置旋转元素的基点位置*/
+    transform-origin: 80px 80px 0;
+    -webkit-transform-origin: 80px 80px 0;
+    transform: rotateX(-20deg) rotateY(30deg);
+    -webkit-transform: rotateX(-20deg) rotateY(30deg);
+}
+
+#box:hover {
+    animation-name: animation;
+    -webkit-animation-name: animation;
+    animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-duration: 10s;
+    -webkit-animation-duration: 10s;
+}
+
+@-webkit-keyframes animation {
+    0% {
+        -webkit-transform: rotateX(0deg) rotateY(0deg)
+    }
+    100% {
+        -webkit-transform: rotateX(360deg) rotateY(360deg)
+    }
+}
+
+@keyframes animation {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg)
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg)
+    }
+}
+
+
+/*6个大面*/
+
+.one {
+    position: absolute;
+    height: 160px;
+    width: 160px;
+    /*border: 1px solid #000;*/
+    /* background: rgba(255, 200, 100, 0.6);*/
+    text-align: center;
+    font-size: 100px;
+    line-height: 160px;
+    -webkit-transform: translateZ(80px);
+    transform: translateZ(80px);
+}
+
+.two {
+    position: absolute;
+    height: 160px;
+    width: 160px;
+    /*border: 1px solid #000;*/
+    /* background: rgba(0, 39, 255, 0.6);*/
+    text-align: center;
+    font-size: 100px;
+    line-height: 160px;
+    -webkit-transform: rotateX(-90deg) translateZ(80px);
+    transform: rotateX(-90deg) translateZ(80px);
+}
+
+.three {
+    position: absolute;
+    height: 160px;
+    width: 160px;
+    /* border: 1px solid #000;*/
+    /*background: rgba(0, 211, 247, 0.6);*/
+    text-align: center;
+    font-size: 100px;
+    line-height: 160px;
+    transform: rotateX(90deg) translateZ(80px);
+}
+
+.four {
+    position: absolute;
+    height: 160px;
+    width: 160px;
+    /* border: 1px solid #000;*/
+    /* background: rgba(0, 0, 0, 0.6);*/
+    text-align: center;
+    font-size: 100px;
+    line-height: 160px;
+    transform: translateZ(-80px) rotateY(180deg) rotateZ(180deg);
+}
+
+.five {
+    position: absolute;
+    height: 160px;
+    width: 160px;
+    /* border: 1px solid #000;*/
+    /*background: rgba(84, 247, 91, 0.6);*/
+    text-align: center;
+    font-size: 100px;
+    line-height: 160px;
+    transform: rotateY(90deg) translateZ(80px);
+}
+
+.six {
+    position: absolute;
+    height: 160px;
+    width: 160px;
+    /* border: 1px solid #000;*/
+    /*background: rgba(255, 200, 100, 0.6);*/
+    text-align: center;
+    font-size: 100px;
+    line-height: 160px;
+    transform: rotateY(-90deg) translateZ(80px);
+}
+
+
+/*每个面的小块*/
+
+.one div {
+    width: 32%;
+    height: 32%;
+    margin: 0.6% 0.6%;
+    background: #000000;
+    float: left;
+    border-radius: 5px;
+}
+
+.two div {
+    width: 32%;
+    height: 32%;
+    margin: 0.6% 0.6%;
+    background: #fd00ff;
+    float: left;
+    border-radius: 5px;
+}
+
+.three div {
+    width: 32%;
+    height: 32%;
+    margin: 0.6% 0.6%;
+    background: #0027ff;
+    float: left;
+    border-radius: 5px;
+}
+
+.four div {
+    width: 32%;
+    height: 32%;
+    margin: 0.6% 0.6%;
+    background: #00bcd4;
+    float: left;
+    border-radius: 5px;
+}
+
+.five div {
+    width: 32%;
+    height: 32%;
+    margin: 0.6% 0.6%;
+    background: #ffe100;
+    float: left;
+    border-radius: 5px;
+}
+
+.six div {
+    width: 32%;
+    height: 32%;
+    margin: 0.6% 0.6%;
+    background: #ff0000;
+    float: left;
+    border-radius: 5px;
+}

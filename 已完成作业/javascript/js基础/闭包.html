@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8">
+	<title>闭包和作用域</title>
+</head>
+<body>
+
+</body>
+
+
+
+<script type="text/javascript">
+	  // var a=10;
+	  // function test(){
+	  // 	console.log(a);//10
+	  // 	if(false){
+	  // 		var b=100;
+	  // 	}else{
+	  // 		var c=1000;
+	  // 	}
+	  // 	console.log(b);//if为false 不执行b代码,结果为undefined
+	  // 	console.log(c);//1000
+	  // }
+   //   test();
+      
+    
+     var j=500;
+     function foo(){
+     	console.log(j);//undefined
+        var j=100;//局部变了只能由函数内部使用
+            i="nihao";//全局变量
+        console.log(j);//100
+     }
+     foo();
+     console.log(j);//500
+     console.log(i);//nihao
+     
+
+     
+     -(function(){
+     	console.log(j);
+     })();//直接输出500；前边加无论什么符号都是代表浏览器自运行匿名函数
+     
+
+
+
+
+     // var a=function(){
+     // 	console.log("hello");
+     // }
+     // a();//hello
+      
+    
+
+    // 闭包就是在a函数中再定义一个函数返回a中的变量，这样就就可以实现外部读取到函数内部的变量了。
+
+     function a(){
+     	var k=22222;
+     	return function b(){
+     		return k;
+     	}
+     	
+     	console.log(k);
+     }
+   var t=a()();
+   console.log(t);
+
+
+// function hi(){
+// 	var h=1;
+// 	console.log(h);
+// }
+
+// var aaa=hi();//aaa是函数hi运行后的值
+// var bbb=hi;//bbb是整个hi函数
+// console.log(bbb);
+
+function setName(obj)
+{ 
+  obj.name="青岛新锐"; 
+  obj=new Object(); 
+  obj.name="蚂蚁部落"; 
+} 
+var web=new Object(); 
+setName(web); 
+console.log(web.name);
+
+
+</script>
+</html>

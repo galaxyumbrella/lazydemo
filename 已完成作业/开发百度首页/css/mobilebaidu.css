@@ -1,0 +1,222 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    min-width: 200px;
+    max-width: 499px;
+    font: 12px Arial;
+}
+
+.wrapper {
+    display: none;
+}
+
+.mobile-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.header {
+    position: relative;
+    background: #F8F8F8;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+
+/*顶部css*/
+
+.weather {
+    margin-top: 5px;
+    margin-bottom: 9px;
+    padding: 0 10px 0 10px;
+}
+
+#weather-info {
+    display: inline-block;
+    list-style: none;
+}
+
+#weather-info li {
+    display: inline-block;
+}
+
+#weather-info li a {
+    color: #999;
+    text-decoration: none;
+}
+
+#weather-info li:nth-child(2) a {
+    font-size: 29px;
+    color: #999;
+    font-weight: 300;
+}
+
+#user-info {
+    position: absolute;
+    right: 10px;
+    display: inline-block;
+    top: 20px;
+}
+
+#user-info img {
+    width: 25px;
+    height: 25px;
+}
+
+.baidu-logo {
+    text-align: center;
+    padding-bottom: 17px;
+}
+
+.baidu-logo img {
+    max-width: 217px;
+}
+
+
+/*移动端搜索框*/
+
+.search-box {
+    margin: 0 15px;
+    position: relative;
+}
+
+.s-form {
+    position: relative;
+}
+
+#s-text {
+    width: 100%;
+    display: inline-block;
+    height: 45px;
+    border: 1px solid #CCC;
+    border-right-width: 0;
+    font-size: 20px;
+    outline: 0;
+    text-indent: 0px;
+    padding: 5px 120px 5px 7px;
+}
+
+#s-text:hover {
+    border-color: #999;
+}
+
+#s-text:focus {
+    border-color: #38f;
+}
+
+#s-submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    width: 82px;
+    height: 45px;
+    border-radius: 0;
+    background: #3385ff;
+    color: #fff;
+    border: 0;
+    font-size: 16px;
+    outline: 0;
+    cursor: pointer;
+    line-height: 45px;
+}
+
+
+/*移动端导航栏*/
+
+.navs {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.nav-wrap {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+}
+
+.nav-wrap a {
+    flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav-text {
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    color: #999;
+}
+
+.nav-img-focus {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: red;
+    background: url(../img/navs.png) no-repeat;
+    background-size: 22px auto;
+    background-position: 0 -286px;
+}
+
+.nav-img-news {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: red;
+    background: url(../img/navs.png) no-repeat;
+    background-size: 22px auto;
+    background-position: 0 -418px;
+}
+
+.nav-img-novel {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: red;
+    background: url(../img/navs.png) no-repeat;
+    background-size: 22px auto;
+    background-position: 0 -352px;
+}
+
+.nav-img-video {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: red;
+    background: url(../img/navs.png) no-repeat;
+    background-size: 22px auto;
+    background-position: 0 -484px;
+}
+
+.nav-img-life {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: red;
+    background: url(../img/navs.png) no-repeat;
+    background-size: 22px auto;
+    background-position: 0 -440px;
+}
+
+.nav-img-map {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: red;
+    background: url(../img/navs.png) no-repeat;
+    background-size: 22px auto;
+    background-position: 0 -330px;
+}

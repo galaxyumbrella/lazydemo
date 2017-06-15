@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>后台登录首页</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bgpage.css">
+</head>
+
+<body>
+    <div class='wrapper'>
+        <div class='bgpage'>
+            <div class='bgpage-box'>
+                <!--    标题部分 -->
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">后台管理</a>
+                        </div>
+                        <div class="option">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> 帮助</a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 返回</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- 菜单栏部分 -->
+              <!--   <div class="main-content row" id="maincontent">
+                    <div class="panel-group col-xs-4 col-sm-3 col-lg-2" id="main-content-left">
+                        <div class="panel panel-info panel-style">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                 <a data-toggle="collapse" data-parent="#main-content-left" href="#collapse-1">系统菜单
+                                 <span class='glyphicon glyphicon-list pull-right'></span></a>
+                            </h4>
+                            </div>
+                            <div id="collapse-1" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <a href="">内容选项</a>
+                                    <a href="">内容选项</a>
+                                    <a href="">内容选项</a>
+                                    <a href="">内容选项</a>
+                                    <a href="">内容选项</a>
+                                    <a href="">内容选项</a>
+                                    <a href="">内容选项</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-info panel-style">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                 <a data-toggle="collapse" data-parent="#main-content-left" href="#collapse-2">系统菜单
+                                 <span class='glyphicon glyphicon-list pull-right'></span></a>
+                            </h4>
+                            </div>
+                            <div id="collapse-2" class="panel-collapse collapse ">
+                                <div class="panel-body" style="padding: 0">
+                                    <a href="">子选项</a>
+                                    <a href="">子选项</a>
+                                    <a href="">子选项</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-info panel-style">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                 <a data-toggle="collapse" data-parent="#main-content-left" href="#collapse-3">系统菜单
+                                 <span class='glyphicon glyphicon-list pull-right'></span></a>
+                            </h4>
+                            </div>
+                            <div id="collapse-3" class="panel-collapse collapse ">
+                                <div class="panel-body" style="padding: 0">
+                                    <a href="">子选项</a>
+                                    <a href="">子选项</a>
+                                    <a href="">子选项</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-info panel-style">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                 <a data-toggle="collapse" data-parent="#main-content-left" href="#collapse-4">系统菜单
+                                 <span class='glyphicon glyphicon-list pull-right'></span></a>
+                            </h4>
+                            </div>
+                            <div id="collapse-4" class="panel-collapse collapse ">
+                                <div class="panel-body" style="padding: 0">
+                                    <a href="">子选项</a>
+                                    <a href="">子选项</a>
+                                    <a href="">子选项</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-info panel-style">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                 <a data-toggle="collapse" data-parent="#main-content-left" href="#collapse-5">系统菜单
+                                 <span class='glyphicon glyphicon-list pull-right'></span></a>
+                            </h4>
+                            </div>
+                            <div id="collapse-5" class="panel-collapse collapse ">
+                                <div class="panel-body" style="padding: 0">
+                                    <a href="">子选项</a>
+                                    <a href="">子选项</a>
+                                    <a href="">子选项</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-info panel-style">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                 <a data-toggle="collapse" data-parent="#main-content-left" href="#collapse-6">系统菜单
+                                 <span class='glyphicon glyphicon-list pull-right'></span></a>
+                            </h4>
+                            </div>
+                            <div id="collapse-6" class="panel-collapse collapse ">
+                                <div class="panel-body" style="padding: 0">
+                                    <a href="">子选项</a>
+                                    <a href="">子选项</a>
+                                    <a href="">子选项</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-info panel-style">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                 <a data-toggle="collapse" data-parent="#main-content-left" href="#collapse-6">系统菜单
+                                 <span class='glyphicon glyphicon-list pull-right'></span></a>
+                            </h4>
+                            </div>
+                            <div id="collapse-6" class="panel-collapse collapse ">
+                                <div class="panel-body" style="padding: 0">
+                                    <a href="">子选项</a>
+                                    <a href="">子选项</a>
+                                    <a href="">子选项</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-info panel-style">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                 <a data-toggle="collapse" data-parent="#main-content-left" href="#collapse-7">系统菜单
+                                 <span class='glyphicon glyphicon-list pull-right'></span></a>
+                            </h4>
+                            </div>
+                            <div id="collapse-7" class="panel-collapse collapse ">
+                                <div class="panel-body" style="padding: 0">
+                                    <a href="">子选项</a>
+                                    <a href="">子选项</a>
+                                    <a href="">子选项</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-info panel-style">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                 <a data-toggle="collapse" data-parent="#main-content-left" href="#collapse-8">系统菜单
+                                 <span class='glyphicon glyphicon-list pull-right'></span></a>
+                            </h4>
+                            </div>
+                            <div id="collapse-8" class="panel-collapse collapse ">
+                                <div class="panel-body" style="padding: 0">
+                                    <a href="">子选项</a>
+                                    <a href="">子选项</a>
+                                    <a href="">子选项</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!--  菜单栏结束 -->
+                    <!--  主要内容
+ -->
+                    <div class=" col-xs-8 col-sm-9 col-lg-10" id='main-content-right'>
+                        <ul id="myTab" class="nav nav-tabs">
+                            <li><a href="#home" data-toggle="tab">主页管理</a></li>
+                            <li><a href="#system" data-toggle="tab">系统管理</a></li>
+                            <li class="active"><a href="#contract" data-toggle="tab">产品信息</a></li>
+                            <li><a href="#base" data-toggle="tab">基础数据</a></li>
+                            <li><a href="#budget" data-toggle="tab">合同信息</a></li>
+                            <li><a href="#project" data-toggle="tab">项目管理</a></li>
+                            <li><a href="#funds" data-toggle="tab">资金管理</a></li>
+                            <li><a href="#product" data-toggle="tab">预算管理</a></li>
+                        </ul>
+                        <div id="myTabContent" class="tab-content">
+                            <div class="tab-pane fade" id="home">
+                                <p>内容</p>
+                            </div>
+                            <div class="tab-pane fade" id="system">
+                                <p>内容</p>
+                            </div>
+                            <div class="tab-pane fade in active" id="contract">
+                                <div id='contract-box'>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">部门：</span>
+                                        <select class="form-control" style="width: 100px;">
+                                            <option value="">全部</option>
+                                            <option value="">财务部</option>
+                                            <option value="">生产部</option>
+                                            <option value="">销售部</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">年份：</span>
+                                        <select class="form-control" style="width: 100px;">
+                                            <option value="">2017</option>
+                                            <option value="">2016</option>
+                                            <option value="">2015</option>
+                                        </select>
+                                    </div>
+                                    <div id="contract-content">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <caption>产品信息:</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th>产品</th>
+                                                        <th>付款日期</th>
+                                                        <th>状态</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>产品1</td>
+                                                        <td>23/11/2017</td>
+                                                        <td>待发货</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>产品2</td>
+                                                        <td>10/11/2017</td>
+                                                        <td>发货中</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>产品3</td>
+                                                        <td>20/10/2017</td>
+                                                        <td>待确认</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>产品4</td>
+                                                        <td>20/10/2017</td>
+                                                        <td>已退货</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>产品5</td>
+                                                        <td>20/10/2017</td>
+                                                        <td>已退货</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>产品6</td>
+                                                        <td>20/10/2017</td>
+                                                        <td>已退货</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>产品7</td>
+                                                        <td>20/10/2017</td>
+                                                        <td>已退货</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div style="text-align: center;">
+                                            <ul class="pagination">
+                                                <li><a href="#">&laquo;</a></li>
+                                                <li class="active"><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">...</a></li>
+                                                <li><a href="#">&raquo;</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="base">
+                                <p>内容</p>
+                            </div>
+                            <div class="tab-pane fade" id="budget">
+                                <p>内容</p>
+                            </div>
+                            <div class="tab-pane fade" id="project">
+                                <p>内容</p>
+                            </div>
+                            <div class="tab-pane fade" id="funds">
+                                <p>内容</p>
+                            </div>
+                            <div class="tab-pane fade" id="product">
+                                <p>内容</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

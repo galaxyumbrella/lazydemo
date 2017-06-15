@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+table{
+    border-collapse: collapse;
+
+}
+th{
+	width:70px;
+	height:30px;
+	text-align:center;
+	}
+td{
+	width:70px;
+	height:30px;
+	text-align:center;
+	}	

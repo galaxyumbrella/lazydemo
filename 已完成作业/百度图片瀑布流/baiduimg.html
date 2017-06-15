@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>瀑布流</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="baiduimg.js"></script>
+    <link rel="stylesheet" href="css/baiduimg.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div class="contentbox">
+                <img src="img/bd_logo.png" alt="百度一下">
+                <form action="https://www.baidu.com/s" method="get" target="_blank" id="form">
+                    <!-- 百度输入框 -->
+                    <div class="s-camtext">
+                        <input type="text" name="wd" class="s-text">
+                    </div>
+                    <!--  百度搜索按钮和相机图片 -->
+                    <div class="s-btn">
+                        <span class="camera-btn"></span>
+                        <input type="submit" value="百度一下" class="s-submit">
+                    </div>
+                    <!-- 清除浮动 -->
+                    <div style="clear: both"></div>
+                </form>
+            </div>
+            <div class="container">
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/1.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/2.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/3.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/4.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/5.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/6.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/7.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/8.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/9.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/10.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/11.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/12.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/13.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/14.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/15.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/16.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/1.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/2.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/3.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/4.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/5.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/6.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/7.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/8.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/9.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/10.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/11.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/12.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/13.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/14.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/15.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/16.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/1.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/2.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/3.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/4.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/5.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/6.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/7.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/8.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/9.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/10.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/11.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/12.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/13.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/14.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/15.jpg">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <img src="img/16.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

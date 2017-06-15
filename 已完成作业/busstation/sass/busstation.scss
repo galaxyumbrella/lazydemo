@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfloat {
+    clear: both;
+}
+
+@mixin center-block {
+    margin: 0 auto;
+}
+
+@mixin text-center {
+    text-align: center;
+}
+
+$red:#f00;
+$white:#fff;
+$blue:#002e96;
+$yellow:#ffeb3b;
+$gray:#8c8b8b;
+$margin:15px;
+.wrapper {
+    width: 600px;
+    @include center-block;
+    border: 5px solid $gray;
+}
+
+.bus-station {
+    width: 100%;
+    height: 120px;
+    background: $blue;
+    color: $white;
+    @include text-center;
+    border: 1px solid $red;
+}
+
+.current-station {
+    display: inline-block;
+    position: relative;
+    font-size: 60px;
+    width: 100%;
+    @include center-block;
+    letter-spacing: 50px;
+    @include text-center;
+    text-indent: 50px;
+}
+
+.bus-route {
+    position: relative;
+    margin-top: $margin+5px;
+    border: 10px solid darken($gray, 10%);
+}
+
+.bus-info {
+    height: 85px;
+    background: $blue;
+    border-bottom: 5px solid $yellow;
+    span {
+        &:nth-child(1) {
+            display: inline-block;
+            color: $yellow;
+            font-size: 50px;
+            line-height: 80px;
+            margin-left: $margin;
+        }
+        &:nth-child(2) {
+            margin-left: $margin*2;
+            color: $white;
+        }
+    }
+}
+
+.arrow-icon {
+    display: block;
+    position: absolute;
+    top: 71px;
+    right: -42px;
+    border: {
+        style: solid;
+        width: 10px 40px 0 40px;
+        color: transparent transparent transparent $yellow;
+    }
+}
+
+.service-time {
+    position: absolute;
+    right: 37px;
+    top: 0;
+    height: 80px;
+}
+
+table {
+    height: 80px;
+    color: $white;
+    th {
+        width: 20px;
+        font-size: 12px;
+        color: $yellow;
+    }
+    td {
+        font-size: 12px;
+        @include text-center;
+    }
+}
+
+.stations {
+    height: 130px;
+    width: 100%;
+    margin: 5px 0;
+    padding: 0 5px;
+    ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        position: relative;
+        li {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            list-style: none;
+            width: 20px;
+            height: 130px;
+            @include text-center;
+            line-height: 18px;
+        }
+    }
+}
+
+.currentcolor {
+    color: $red;
+}

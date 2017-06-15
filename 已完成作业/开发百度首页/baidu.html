@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=divice-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>百度一下 你就知道</title>
+    <link rel="stylesheet" href="css/baidu.css" media="screen and (min-width:769px)" />
+    <link rel="stylesheet" href="css/ipadbaidu.css" media="screen and (min-width:500px) and (max-width:768px)">
+    <link rel="stylesheet" href="css/mobilebaidu.css" media="screen and (min-width:200px) and (max-width:499px)">
+    <!--[if IE]>  
+    <script src="html5js/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- 顶部水平菜单 -->
+        <header>
+            <nav class="nav">
+                <ul class="navbox">
+                    <li class="navitems"><a href="https://www.nuomi.com/?cid=002540"><span class="bold">糯米</span></a></li>
+                    <li class="navitems"><a href="http://news.baidu.com/"><span class="bold">新闻</span></a></li>
+                    <li class="navitems"><a href="https://www.hao123.com/"><span class="bold">hao123</span></a></li>
+                    <li class="navitems"><a href="http://map.baidu.com/"><span class="bold">地图</span></a></li>
+                    <li class="navitems"><a href="http://v.baidu.com/"><span class="bold">视频</span></a></li>
+                    <li class="navitems"><a href="https://tieba.baidu.com/index.html"><span class="bold">贴吧</span></a></li>
+                    <li class="navitems m-dengru"><a href="https://passport.baidu.com/v2/?login"><span>登入</span></a></li>
+                    <li class="navitems m-shezhi"><a href="javascript:;"><span>设置</span></a></li>
+                    <li class="navitems m-dispnone">
+                        <ul class="navitems list">
+                            <li class="navitems">
+                                <div class="more">更多产品</div>
+                                <!-- 下拉菜单 -->
+                                <ul class="more-list">
+                                    <li>
+                                        <a href="#">
+                                            <div class="list-music"></div> <span class="listfont">音乐</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="list-img"></div><span class="listfont">图片</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="list-zhidao"></div><span class="listfont">知道</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="list-wengku"></div><span class="listfont">文库</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="list-bang"></div><span class="listfont">风云榜</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="list-all"></div><span class="listfont">全部信息</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- 中间部分    -->
+        <div class="content">
+            <div class="contentbox">
+                <div style="text-align: center;clear: both"><img src="img/bd_logo1.png" alt="百度一下"></div>
+                <form action="https://www.baidu.com/s" method="get" target="_blank" id="form">
+                    <!-- 百度输入框 -->
+                    <div class="s-camtext">
+                        <input type="text" name="wd" class="s-text">
+                    </div>
+                    <!--  百度搜索按钮和相机图片 -->
+                    <div class="s-btn">
+                        <span class="camera-btn"></span>
+                        <input type="submit" value="百度一下" class="s-submit">
+                    </div>
+                    <!-- 清除浮动 -->
+                    <div style="clear: both"></div>
+                </form>
+            </div>
+        </div>
+        <!-- 底部 -->
+        <footer>
+            <div class="m-dispnone">
+                <img src="img/zbios_x2_9d645d9.png">
+                <p><span class="bold">手机百度</span></p>
+            </div>
+            <p>
+                <a href="https://www.baidu.com/cache/sethelp/help.html">把百度设为主页</a>
+                <a href="http://home.baidu.com/" class="m-dispnone">关于百度</a>
+                <a href="http://ir.baidu.com/mobile.view?c=188488&p=irol-irhome">About Baidu</a>
+                <a href="http://e.baidu.com/?refer=888&subsite=fj" class="m-dispnone">百度推广</a>
+            </p>
+            <p>
+                <span>©2017 Baidu</span>
+                <a href="http://www.baidu.com/duty/" class="m-dispnone">使用百度前必读</a>
+                <a href="http://jianyi.baidu.com/">意见反馈</a>
+                <span>京ICP证030173号</span>
+                <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000001" class="m-dispnone">京公网安备11000002000001号</a>
+            </p>
+        </footer>
+    </div>
+    <!-- 以下是移动端布局 -->
+    <div class="mobile-wrapper">
+        <div class="header">
+            <div class='weather'>
+                <ul id="weather-info">
+                    <li><a href="#">小雨</a></li>
+                    <li><a href="#">12°</a></li>
+                    <li><a href="#">福州</a></li>
+                </ul>
+                <a id='user-info'>
+                    <img src="img/user.png" alt="">
+                </a>
+            </div>
+            <div class="baidu-logo">
+                <img src="img/plus_logo.png" alt="">
+            </div>
+            <!-- 移动端搜索框 -->
+            <div class="search-box">
+                <form action="" class="s-form">
+                    <input type="text" id="s-text">
+                    <input type="submit" value="百度一下" id="s-submit">
+                </form>
+            </div>
+            <!-- 移动端导航栏 -->
+            <div class="navs">
+                <div class="nav-wrap">
+                    <a href=""><span class="nav-img-focus"></span><span class="nav-text">关注</span></a>
+                    <a href=""><span class="nav-img-news"></span><span class="nav-text">新闻</span></a>
+                    <a href=""><span class="nav-img-novel"></span><span class="nav-text">小说</span></a>
+                    <a href=""><span class="nav-img-video"></span><span class="nav-text">视频</span></a>
+                    <a href=""><span class="nav-img-life"></span><span class="nav-text">糯米</span></a>
+                    <a href=""><span class="nav-img-map"></span><span class="nav-text">地图</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="with=divice-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>百度一下 你就知道</title>
+    <link rel="stylesheet" href="baidu.css" />
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+   <!--  <script type="text/javascript" src="baidu.js"></script> -->
+    <script type="text/javascript" src="singleton.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- 皮肤 -->
+        <div id="skin-items">
+            <div id="skin-items-btn">
+                <button id="close-changeskin">关闭</button>
+                <div style="clear: both;"></div>
+            </div>
+            <ul>
+                <li class="skin-img"><img src="img/ali.jpg"></li>
+                <li class="skin-img"><img src="img/spring.jpg"></li>
+                <li class="skin-img"><img src="img/clover.jpg"></li>
+                <li class="skin-img"><img src="img/pugongying.jpg"></li>
+                <li class="skin-img"><img src="img/purplemagic.jpg"></li>
+                <li class="skin-img"><img src="img/default.png"></li>
+            </ul>
+        </div>
+        <!-- 顶部水平菜单 -->
+        <div class="header">
+            <div class="l-navbar">
+                <div class="weather-wrapper">
+                    <span>福州:</span>
+                    <span>图片</span>
+                    <span>21℃</span>
+                    <span style="color:#0006ff;font-weight: bold">良</span>
+                    <span>99</span>
+                </div>
+                <div class="l-navbar-icons">
+                    <a href="#">宝箱</a>
+                    <a href="#" id="changeskin-btn">换肤</a>
+                    <a href="#">消息</a>
+                </div>
+                <div class="weather-content">
+                    <span class="menu-arrow" style="margin-left: 50px;"></span>
+                    <div class="weather-nav"><span>04月18日</span><span>农历三月二十二</span></div>
+                    <div class="weather-icon">
+                        <a href="#" target="_blank" class="weather-active">
+                            <p class="everyday-title" title="今天(周二)">今天(周二)</p>
+                            <img class="everyday-icon" src="img/a1.jpg">
+                            <p class="everyday-temp" title="29℃">29℃</p>
+                            <p class="everyday-condition" title="多云转阵雨">多云转阵雨</p>
+                            <p class="everyday-wind" title="西风3-4级">西风3-4级</p>
+                        </a>
+                        <a href="#" target="_blank">
+                            <p class="everyday-title" title="明天(周三)">明天(周三)</p>
+                            <img class="everyday-icon" src="img/a1.jpg">
+                            <p class="everyday-temp" title="29℃">29℃</p>
+                            <p class="everyday-condition" title="多云转阵雨">多云转阵雨</p>
+                            <p class="everyday-wind" title="西风3-4级">西风3-4级</p>
+                        </a>
+                        <a href="#" target="_blank">
+                            <p class="everyday-title" title="后天(周四)">后天(周四)</p>
+                            <img class="everyday-icon" src="img/a1.jpg">
+                            <p class="everyday-temp" title="29℃">29℃</p>
+                            <p class="everyday-condition" title="多云转阵雨">多云转阵雨</p>
+                            <p class="everyday-wind" title="西风3-4级">西风3-4级</p>
+                        </a>
+                        <a href="#" target="_blank">
+                            <p class="everyday-title" title="周五">周五</p>
+                            <img class="everyday-icon" src="img/a1.jpg">
+                            <p class="everyday-temp" title="29℃">29℃</p>
+                            <p class="everyday-condition" title="多云转阵雨">多云转阵雨</p>
+                            <p class="everyday-wind" title="西风3-4级">西风3-4级</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="r-navbar">
+                <a href="http://news.baidu.com/"><span class="bold">新闻</span></a>
+                <a href="https://www.hao123.com/"><span class="bold">hao123</span></a>
+                <a href="http://map.baidu.com/"><span class="bold">地图</span></a>
+                <a href="http://v.baidu.com/"><span class="bold">视频</span></a>
+                <a href="https://tieba.baidu.com/index.html"><span class="bold">贴吧</span></a>
+                <a href="http://xueshu.baidu.com"><span class="bold">学术</span></a>
+                <a href="http://i.baidu.com/" class="myinfo-name"><span>思量</span></a>
+                <a href="javascript:;" class="setting-name"><span>设置</span></a>
+                <div class="myinfo">
+                    <span class="menu-arrow"></span>
+                    <a href="#">我的VIP</a>
+                    <a href="#">个人中心</a>
+                    <a href="#">帐号设置</a>
+                    <a href="#">意见反馈</a>
+                    <a href="#">退出</a>
+                </div>
+                <div class="setting">
+                    <span class="menu-arrow"></span>
+                    <a href="#">搜索设置</a>
+                    <a href="#">高级搜索</a>
+                    <a href="#">关闭预测</a>
+                    <a href="#">搜索历史</a>
+                </div>
+            </div>
+        </div>
+        <ul class="more-list">
+            <li class="more-product"><a href="#"><span>更多产品</span></a></li>
+        </ul>
+        <ul class="more-list-down">
+            <li id="more-product-01"><a href="#"><span>更多产品</span></a></li>
+            <li>
+                <a href="#">
+                    <div class="list-music"></div> <span class="listfont">音乐</span></a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="list-img"></div><span class="listfont">图片</span></a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="list-zhidao"></div><span class="listfont">知道</span></a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="list-wengku"></div><span class="listfont">文库</span></a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="list-bang"></div><span class="listfont">风云榜</span></a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="list-all"></div><span class="listfont">全部信息</span></a>
+            </li>
+        </ul>
+        <!-- 中间部分    -->
+        <div class="content">
+            <div class="contentbox">
+                <div class="bd-logo"><img src="img/baidu.png" alt="百度一下"></div>
+                <form action="https://www.baidu.com/s" method="get" target="_blank" id="form">
+                    <!-- 百度输入框 -->
+                    <div class="s-camtext">
+                        <input type="text" name="wd" class="s-text">
+                    </div>
+                    <!--  百度搜索按钮和相机图片 -->
+                    <div class="s-btn">
+                        <span class="camera-btn"></span>
+                        <input type="submit" value="百度一下" class="s-submit">
+                    </div>
+                    <!-- 清除浮动 -->
+                    <div style="clear: both"></div>
+                </form>
+            </div>
+        </div>
+        <!-- 信息区域 -->
+        <div class="main">
+            <div class="main-head">
+                <a href="#"><span class="mine-icon"></span>我的关注</a>
+                <a href="#" class="tabin tabinbg">推荐</a>
+                <a href="#">导航</a>
+                <a href="#">视频</a>
+                <a href="#">购物</a>
+            </div>
+            <div class="setting-options"><span title="设置"></span></div>
+            <div class="main-content">内容1</div>
+            <div class="main-content main-content-active">
+                <div class="s-news-left">
+                    <div class="recommend-news">
+                        <div class="s-news-img">
+                            <a href="http://news.haiwainet.cn/n/2017/0417/c3541093-30864565.html" target="_blank"><img src="img/1.JPEG"></a>
+                        </div>
+                        <div class="s-news-title">
+                            <h2><a href="http://news.haiwainet.cn/n/2017/0417/c3541093-30864565.html" target="_blank">美国副总统视察三八线 重申对朝战略容忍已结束</a></h2></div>
+                        <div style="clear: both"></div>
+                    </div>
+                    <div class="recommend-news">
+                        <div class="s-news-img">
+                            <a href="http://news.haiwainet.cn/n/2017/0417/c3541093-30864565.html" target="_blank"><img src="img/2.JPEG"></a>
+                        </div>
+                        <div class="s-news-title">
+                            <h2><a href="http://news.haiwainet.cn/n/2017/0417/c3541093-30864565.html" target="_blank">韩媒：朝驻华大使未出席当地太阳节活动 或已返朝</a></h2></div>
+                        <div style="clear: both"></div>
+                    </div>
+                    <div class="recommend-news">
+                        <div class="s-news-img">
+                            <a href="http://news.haiwainet.cn/n/2017/0417/c3541093-30864565.html" target="_blank"><img src="img/2.JPEG"></a>
+                        </div>
+                        <div class="s-news-title">
+                            <h2><a href="http://news.haiwainet.cn/n/2017/0417/c3541093-30864565.html" target="_blank">韩媒：朝驻华大使未出席当地太阳节活动 或已返朝</a></h2></div>
+                        <div style="clear: both"></div>
+                    </div>
+                    <div class="recommend-news">
+                        <div class="s-news-img">
+                            <a href="http://news.haiwainet.cn/n/2017/0417/c3541093-30864565.html" target="_blank"><img src="img/2.JPEG"></a>
+                        </div>
+                        <div class="s-news-title">
+                            <h2><a href="http://news.haiwainet.cn/n/2017/0417/c3541093-30864565.html" target="_blank">韩媒：朝驻华大使未出席当地太阳节活动 或已返朝</a></h2></div>
+                        <div style="clear: both"></div>
+                    </div>
+                    <div class="recommend-news">
+                        <div class="s-news-img">
+                            <a href="http://news.haiwainet.cn/n/2017/0417/c3541093-30864565.html" target="_blank"><img src="img/2.JPEG"></a>
+                        </div>
+                        <div class="s-news-title">
+                            <h2><a href="http://news.haiwainet.cn/n/2017/0417/c3541093-30864565.html" target="_blank">韩媒：朝驻华大使未出席当地太阳节活动 或已返朝</a></h2></div>
+                        <div style="clear: both"></div>
+                    </div>
+                    <div class="recommend-news">
+                        <div class="s-news-img">
+                            <a href="http://news.haiwainet.cn/n/2017/0417/c3541093-30864565.html" target="_blank"><img src="img/2.JPEG"></a>
+                        </div>
+                        <div class="s-news-title">
+                            <h2><a href="http://news.haiwainet.cn/n/2017/0417/c3541093-30864565.html" target="_blank">韩媒：朝驻华大使未出席当地太阳节活动 或已返朝</a></h2></div>
+                        <div style="clear: both"></div>
+                    </div>
+                </div>
+                <div class="s-news-right">
+                    <div class="s-news-hot-01">
+                        <a href="http://top.baidu.com/?fr=mhd_card" target="_blank"><h3>实时热点</h3></a>
+                        <a href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=C919%E9%A6%96%E9%A3%9E%E4%B8%B4%E8%BF%91&rsv_idx=2" target="_blank">C919首飞临近</a>
+                        <a href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=C919%E9%A6%96%E9%A3%9E%E4%B8%B4%E8%BF%91&rsv_idx=2" target="_blank">C919首飞临近</a>
+                        <a href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=C919%E9%A6%96%E9%A3%9E%E4%B8%B4%E8%BF%91&rsv_idx=2" target="_blank">C919首飞临近</a>
+                        <a href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=C919%E9%A6%96%E9%A3%9E%E4%B8%B4%E8%BF%91&rsv_idx=2" target="_blank">C919首飞临近</a>
+                        <a href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=C919%E9%A6%96%E9%A3%9E%E4%B8%B4%E8%BF%91&rsv_idx=2" target="_blank">C919首飞临近</a>
+                        <a href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=C919%E9%A6%96%E9%A3%9E%E4%B8%B4%E8%BF%91&rsv_idx=2" target="_blank">C919首飞临近</a>
+                        <a href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=C919%E9%A6%96%E9%A3%9E%E4%B8%B4%E8%BF%91&rsv_idx=2" target="_blank">C919首飞临近</a>
+                        <a href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=C919%E9%A6%96%E9%A3%9E%E4%B8%B4%E8%BF%91&rsv_idx=2" target="_blank">C919首飞临近</a>
+                    </div>
+                    <div class="s-news-hot-02">
+                        <a href="" style="text-align: right;" target="_blank">换一换</a>
+                        <a href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=C919%E9%A6%96%E9%A3%9E%E4%B8%B4%E8%BF%91&rsv_idx=2" target="_blank">C919首飞临近</a>
+                        <a href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=C919%E9%A6%96%E9%A3%9E%E4%B8%B4%E8%BF%91&rsv_idx=2" target="_blank">C919首飞临近</a>
+                        <a href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=C919%E9%A6%96%E9%A3%9E%E4%B8%B4%E8%BF%91&rsv_idx=2" target="_blank">C919首飞临近</a>
+                        <a href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=C919%E9%A6%96%E9%A3%9E%E4%B8%B4%E8%BF%91&rsv_idx=2" target="_blank">C919首飞临近</a>
+                        <a href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=C919%E9%A6%96%E9%A3%9E%E4%B8%B4%E8%BF%91&rsv_idx=2" target="_blank">C919首飞临近</a>
+                        <a href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=C919%E9%A6%96%E9%A3%9E%E4%B8%B4%E8%BF%91&rsv_idx=2" target="_blank">C919首飞临近</a>
+                        <a href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=C919%E9%A6%96%E9%A3%9E%E4%B8%B4%E8%BF%91&rsv_idx=2" target="_blank">C919首飞临近</a>
+                        <a href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=C919%E9%A6%96%E9%A3%9E%E4%B8%B4%E8%BF%91&rsv_idx=2" target="_blank">C919首飞临近</a>
+                    </div>
+                </div>
+                <div class="s-more-bar">
+                    <div class="load-text">滚动查看更多</div>
+                    <div class="animate-arrow"><span></span></div>
+                </div>
+            </div>
+            <div class="main-content">
+                <h3>猜你喜欢</h3>
+                <div class="nav-item">
+                    <a href="#" target="_blank"><img src="img/bdnuomi.png"><span>百度糯米</span></a>
+                    <a href="#" target="_blank"><img src="img/bdnuomi.png"><span>百度糯米</span></a>
+                    <a href="#" target="_blank"><img src="img/bdnuomi.png"><span>百度糯米</span></a>
+                    <a href="#" target="_blank"><img src="img/bdnuomi.png"><span>百度糯米</span></a>
+                    <a href="#" target="_blank"><img src="img/bdnuomi.png"><span>百度糯米</span></a>
+                    <a href="#" target="_blank"><img src="img/bdnuomi.png"><span>百度糯米</span></a>
+                    <a href="#" target="_blank"><img src="img/bdnuomi.png"><span>百度糯米</span></a>
+                    <a href="#" target="_blank"><img src="img/bdnuomi.png"><span>百度糯米</span></a>
+                    <a href="#" target="_blank"><img src="img/bdnuomi.png"><span>百度糯米</span></a>
+                    <a href="#" target="_blank"><img src="img/bdnuomi.png"><span>百度糯米</span></a>
+                    <a href="#" target="_blank"><img src="img/bdnuomi.png"><span>百度糯米</span></a>
+                    <a href="#" target="_blank"><img src="img/bdnuomi.png"><span>百度糯米</span></a>
+                    <a href="#" target="_blank"><img src="img/bdnuomi.png"><span>百度糯米</span></a>
+                    <a href="#" target="_blank"><img src="img/bdnuomi.png"><span>百度糯米</span></a>
+                    <a href="#" target="_blank"><img src="img/bdnuomi.png"><span>百度糯米</span></a>
+                    <a href="#" target="_blank"><img src="img/bdnuomi.png"><span>百度糯米</span></a>
+                    <a href="#" target="_blank"><img src="img/bdnuomi.png"><span>百度糯米</span></a>
+                    <a href="#" target="_blank"><img src="img/bdnuomi.png"><span>百度糯米</span></a>
+                    <a href="#" target="_blank"><img src="img/bdnuomi.png"><span>百度糯米</span></a>
+                    <a href="#" target="_blank"><img src="img/bdnuomi.png"><span>百度糯米</span></a>
+                    <a href="#" target="_blank"><img src="img/bdnuomi.png"><span>百度糯米</span></a>
+                    <a href="#" target="_blank"><img src="img/bdnuomi.png"><span>百度糯米</span></a>
+                    <a href="#" target="_blank"><img src="img/bdnuomi.png"><span>百度糯米</span></a>
+                    <a href="#" target="_blank"><img src="img/bdnuomi.png"><span>百度糯米</span></a>
+                </div>
+            </div>
+            <div class="main-content">内容4</div>
+            <div class="main-content">内容5</div>
+            <div class="back-to-top"><img src="img/backtotop.png"></div>
+        </div>
+        <!-- 底部 -->
+        <div class="footer">
+            <p>
+                <a href="https://www.baidu.com/cache/sethelp/help.html">把百度设为主页</a>
+                <a href="http://home.baidu.com/" class="m-dispnone">关于百度</a>
+                <a href="http://ir.baidu.com/mobile.view?c=188488&p=irol-irhome">About Baidu</a>
+                <a href="http://e.baidu.com/?refer=888&subsite=fj" class="m-dispnone">百度推广</a>
+            </p>
+            <p>
+                <span>©2017 Baidu</span>
+                <a href="http://www.baidu.com/duty/" class="m-dispnone">使用百度前必读</a>
+                <a href="http://jianyi.baidu.com/">意见反馈</a>
+                <span>京ICP证030173号</span>
+                <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000001" class="m-dispnone">京公网安备11000002000001号</a>
+            </p>
+        </div>
+    </div>
+    <!-- <script type="text/javascript" src="changeskin.js"></script> -->
+</body>
+
+</html>

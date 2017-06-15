@@ -1,0 +1,66 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    background: url(../img/blue.gif) no-repeat center;
+    background-size: cover;
+    position: relative;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 350px) {
+    .login {
+        left: 50%;
+        margin-left: -175px;
+    }
+}
+
+.login {
+    width: 100%;
+    max-width: 350px;
+    height: 230px;
+    position: absolute;
+    top: 30%;
+    border: 2px solid #0a497b;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px #0a497b, -1px -1px 10px #0a497b;
+}
+
+.login-box {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    margin-left: -100px;
+    text-align: center;
+}
+
+.login-btn {
+    width: 80px;
+}
+input[type="submit"]{
+    margin-right: 20px;
+}
+.input-group {
+    margin-top: 10px;
+}
+
+#btn-group {
+    margin-top: 10px;
+}
+
+.checkbox a {
+    margin-left: 30px;
+    font-size: 5px;
+    color: #FF0202;
+}
+
+a[target] {
+    margin-right: 20px;
+}

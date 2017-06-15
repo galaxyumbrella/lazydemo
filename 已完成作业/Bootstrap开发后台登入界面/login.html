@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>后台登入界面</title>
+    <link rel="stylesheet" href="css/login.css">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class='wrapper'>
+        <div class='login'>
+            <div class='login-box'>
+                <h3>登录</h3>
+                <form action="bgpage.html" method="get">
+                    <div class='input-group'>
+                        <span class='input-group-addon'><span class="glyphicon glyphicon-user"></span></span>
+                        <input type="text" class='form-control' placeholder="用户名" name="username">
+                    </div>
+                    <div class='input-group'>
+                        <span class='input-group-addon'><span class="glyphicon glyphicon-lock"></span></span>
+                        <input type="password" class='form-control' placeholder="密码">
+                    </div>
+                    <div class="checkbox">
+                        <label for="autologin">
+                            <input type="checkbox" id="autologin">下次自动登录
+                        </label>
+                        <a href="#"><span>忘记密码</span></a>
+                    </div>
+                    <div id='btn-group'>
+                        <input class='btn btn-info login-btn' type="submit" value="确定">
+                        <input class='btn btn-warning login-btn' type="reset" onclick="" value="重置">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

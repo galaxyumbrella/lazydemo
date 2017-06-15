@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>初级前端面试题</title>
+    <link rel="stylesheet" href="">
+    <style>
+    @import url();
+    div {
+        margin: 10px 15px;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    p {
+        line-height: 25px;
+        text-indent: 32px;
+        margin-left: 20px;
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>初级前端面试题</h1>
+        <h3>1.对WEB标准以及W3C的理解与认识</h3>
+        <p>标签闭合、标签小写、不乱嵌套、提高搜索机器人搜索几率、使用外链css和js脚本、结构行为表现的分离、文件下载与页面速度更快、内容能被更多的用户所访问、内容能被更广泛的设备所访问、更少的代码和组件，容易维护、改版方便，不需要变动页面内容、提供打印版本而不需要复制内容、提高网站易用性;</p>
+        <h3>2.主流的浏览器分别是什么内核？</h3>
+        <p>IE：Trident内核 　　Mozilla FireFox：Gecko内核 　　Chrome、Safari：Webkit内核 　　Opera：Presto内核
+        </p>
+        <h3>3.行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？</h3>
+        <p>首先：CSS规范规定，每个元素都有display属性，确定该元素的类型，每个元素都有默认的display值，如div的display默认值为“block”，则为“块级”元素；span默认display属性值为“inline”，是“行内”元素。
+            <br/>（1）行内元素有：a b span img input select strong（强调的语气）
+            <br/>（2）块级元素有：div ul ol li dl dt dd h1 h2 h3 h4… p
+            <br/>（3）常见的空元素：br img input link meta
+        </p>
+        <h3>4.CSS引入的方式有哪些? link和@import的区别是?</h3>
+        <p>引入方式：内联、内嵌、外链、导入。
+            <br/>区别1：link是XHTML标签，除了加载CSS外，还可以定义RSS等其他事务；@import属于CSS范畴，只能加载CSS。
+            <br/>区别2：link引用CSS时，在页面载入时同时加载；@import需要页面网页完全载入以后加载。
+            <br/>区别3：link是XHTML标签，无兼容问题；@import是在CSS2.1提出的，低版本的浏览器不支持。
+            <br/>区别4：ink支持使用Javascript控制DOM去改变样式；而@import不支持。
+        </p>
+        <h3>5.前端页面有哪三层构成，分别是什么?作用是什么?</h3>
+        <p>结构层:html 表示层:CSS 行为层:js</p>
+        <h3>6.img标签上title与alt属性的区别是什么?</h3>
+        <p>Alt为图片不显示时用文字表示。Title会在鼠标移到元素上时显示一段工具提示文本</p>
+        <h3>7.html语义化</h3>
+        <p>语义化的HTML就是写出的HTML代码，符合内容的结构化（内容语义化），选择合适的标签（代码语义化），能够便于开发者阅读和写出更优雅的代码的同时让浏览器的爬虫和机器很好地解析。
+            <br/> 1.语义化有利于SEO，有利于搜索引擎爬虫更好的理解我们的网页，从而获取更多的有效信息，提升网页的权重。
+            <br/> 2.在没有CSS的时候能够清晰的看出网页的结构，增强可读性。
+            <br/> 3.便于团队开发和维护，语义化的HTML可以让开发者更容易的看明白，从而提高团队的效率和协调能力。
+            <br/> 4.支持多终端设备的浏览器渲染。
+        </p>
+        <h3>8.超链接访问过后hover样式就不出现的问题?</h3>
+        <p>被点击访问过的超链接样式不在具有hover和active了,解决方法是改变CSS属性的排列顺序: L-V-H-A（link-visited-hover-active）</p>
+        <h3>9.float元素的父元素不能指定clear属性</h3>
+        <p>MacIE下如果对float的元素的父元素使用clear属性，周围的float元素布局就会混乱。这是MacIE的著名的bug，倘若不知道就会走弯路。</p>
+        <h3>是否重设默认的样式?</h3>
+        <p>某些属性如margin、padding等，不同浏览器会有不同的解释。因此最好在开发前首先将全体的margin、padding设置为0、列表样式设置为none等。</p>
+        <h3>10.html doctype文档类型</h3>
+        <p>XHTML 1.0中有3种DTD（文档类型定义）声明可以选择：过渡的（Transitional）、严格的（Strict）和框架的（Frameset）。这里分别介绍如下。
+            <br/> 1．过渡的 一种要求不很严格的DTD，允许在页面中使用HTML4.01的标识（符合xhtml语法标准）。过渡的DTD的写法如下： "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+            <br/> 2．严格的 一种要求严格的DTD，不允许使用任何表现层的标识和属性，例如 等。严格的DTD的写法如下： "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+            <br/>3．框架的 一种专门针对框架页面所使用的DTD，当页面中含有框架元素时，就要采用这种DTD。框架的DTD的写法如下： "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+            <br/>使用严格的DTD来制作页面，当然是最理想的方式。但是，对于没有深入了解Web标准的网页设计者，比较合适的是使用过渡的DTD。因为这种DTD还允许使用表现层的标识、元素和属性，比较适合大多数网页制作人员。
+        </p>
+        <h3>11.HTML5 为什么只需要写 !DOCTYPE HTML？</h3>
+        <p> HTML5 不基于 SGML，因此不需要对DTD进行引用，但是需要doctype来规范浏览器的行为（让浏览器按照它们应该的方式来运行）； 而HTML4.01基于SGML,所以需要对DTD进行引用，才能告知浏览器文档所使用的文档类型。
+        </p>
+        <h3></h3>
+        <p></p>
+        <h3></h3>
+        <p></p>
+        <h3></h3>
+        <p></p>
+    </div>
+</body>
+
+</html>

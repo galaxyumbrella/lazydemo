@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ie中event事件对象</title>
+</head>
+
+<body>
+    <pre>
+	   event.srcElement:事件目标（相当于event.target）;
+	   event.type:被触发事件的类型；
+	   event.returnValue:取消默认行为（相当于DOM中event.preventDefault（））；
+	   event.cancelBubble：取消事件冒泡（相当于DOM中event.stopPropagation（））；
+    </pre>
+    <button id="btn2">点击</button>
+    <a href="http://www.baidu.com" id="myLink">百度</a>
+
+
+
+    <script type="text/javascript">
+    var btn2 = document.getElementById("btn2");
+    // btn.onclick=function(){
+    // 	alert(window.event.type);
+    // }
+    btn2.attachEvent("onclick", function() {
+        alert(window.event.srcElement); //ie10（包括10）以内才有用
+        window.event.cance1Bubble=true;//取消事件冒泡
+    });
+
+    var myLink = document.getElementById("myLink");
+    myLink.onclick = function() {
+    	alert("clicked");
+        window.event.returnValue = false; //取消本身的默认行为，a链接不能链接百度了,ie10（包括10）以内才有用
+    }
+    </script>
+</body>
+
+</html>

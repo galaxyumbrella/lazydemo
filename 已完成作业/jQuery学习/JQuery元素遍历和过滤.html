@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8">
+	<title>1</title>
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    		$("#div1").addClass("style1");//在css中写入style1和他的属性
+    		//修改css属性用大括号｛｝；
+    		// $("#div1").children("#div2").css({"border":"3px solid red"});//children()只对子级元素起作用,括号里边参数可选
+    		// $("#div1").find("p").css({"border":"1px solid blue"});//find("p")可对子孙所有指定元素起作用，括号里边参数必须。
+            
+            // $("p").parent().css({"border":"1px solid blue"});//只有对直接父元素起作用
+            // $("p").parents().css({"border":"1px solid blue"});//没参数时对所有祖先元素，$("p").parents("#div1")时只对div1起作用
+            $("p").parentsUntil("#div1").css({"border":"1px solid blue"});//区间的作用 从p到div1之间不包括自身起作用
+    		
+    	});
+
+    </script>
+</head>
+<body>
+    <div id="div1">
+    	<div id="div2">
+    		<p>
+    			<a href="#">a</a>
+    		</p>
+
+    	</div>
+    </div>
+
+</body>
+</html>

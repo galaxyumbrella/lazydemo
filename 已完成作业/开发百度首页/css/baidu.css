@@ -1,0 +1,283 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font: 12px Arial;
+}
+
+.wrapper {
+    height: 100%;
+    position: relative;
+}
+.mobile-wrapper{
+    display: none;
+}
+header {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+}
+
+.nav {
+    z-index: 2;
+}
+
+.navitems {
+    display: inline;
+    margin-left: 10px;
+    list-style: none;
+    text-align: center;
+}
+
+.navitems a {
+    color: #333;
+}
+
+.navitems a:hover {
+    color: #00C;
+}
+
+.list {
+    margin: 0;
+    padding: 0;
+}
+
+.more {
+    display: inline-block;
+    *+display: inline-block;
+    height: 25px;
+    width: 70px;
+    text-align: center;
+    line-height: 25px;
+    background: #3385ff;
+    color: white;
+}
+
+.more {
+    *+display: inline;
+}
+
+.more:hover {
+    background: #F9F9F9;
+    color: black;
+}
+
+.navitems:hover .more-list {
+    display: block;
+}
+
+
+/*下拉菜单*/
+
+.more-list {
+    width: 70px;
+    text-align: center;
+    line-height: 25px;
+    position: absolute;
+    right: 0px;
+    *+top: 20px;
+    display: none;
+    z-index: 50;
+}
+
+.more-list li {
+    text-align: center;
+    border-top: 1px solid #CEAEAE;
+    list-style: none;
+}
+
+.more-list li a {
+    display: block;
+    width: 70px;
+    text-align: center;
+    background: #F9F9F9;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.list-music {
+    width: 39px;
+    height: 36px;
+    background: url(../img/more.png) no-repeat;
+    background-position: -72px 0;
+    margin: 5px auto 0 auto;
+    line-height: 10px;
+}
+
+.list-img {
+    width: 34px;
+    height: 36px;
+    background: url(../img/more.png) no-repeat;
+    background-position: -112px 0;
+    margin: 5px auto 0 auto;
+}
+
+.list-zhidao {
+    width: 36px;
+    height: 36px;
+    background: url(../img/more.png) no-repeat;
+    background-position: -36px 0;
+    margin: 5px auto 0 auto;
+}
+
+.list-wengku {
+    width: 39px;
+    height: 36px;
+    background: url(../img/more.png) no-repeat;
+    background-position: -144px 0;
+    margin: 5px auto 0 auto;
+}
+
+.list-bang {
+    width: 39px;
+    height: 36px;
+    background: url(../img/more.png) no-repeat;
+    background-position: -220px 0;
+    margin: 5px auto 0 auto;
+}
+
+.list-all {
+    width: 39px;
+    height: 36px;
+    background: url(../img/more.png) no-repeat;
+    background-position: -181px 0;
+    margin: 5px auto 0 auto;
+}
+
+.bold {
+    font-weight: 800;
+}
+
+
+/*中间部分*/
+
+.content {
+    position: relative;
+    top: 131px;
+}
+
+.contentbox {
+    text-align: center;
+    position: relative;
+}
+
+.content img {
+    width: 270px;
+    height: 129px;
+    clear: both;
+    margin-bottom: 10px;
+    +display: block;
+}
+
+#form {
+    position: relative;
+    width: 600px;
+    margin:auto;
+
+}
+
+
+/*相机*/
+
+.camera-btn {
+    width: 18px;
+    height: 18px;
+    background: url(../img/camera.png);
+    cursor: pointer;
+    position: absolute;
+    top: 9px;
+    right: 105px;
+}
+
+.camera-btn:hover {
+    width: 18px;
+    height: 18px;
+    background: url(../img/camera.png);
+    background-position: 0 18px;
+    position: absolute;
+    top: 9px;
+    right: 105px;
+}
+
+
+/*百度搜索框*/
+
+.content .s-camtext {
+    float: left;
+}
+
+.content .s-text {
+    width: 500px;
+    height: 32px;
+    border: 1px solid #CCC;
+    border-right-width: 0;
+    font-size: 20px;
+    padding: 0px;
+    padding-left: 1px\9;
+    line-height: 32px\9;
+    outline: 0;
+    text-indent: 7px;
+}
+
+.content .s-text:hover {
+    border-color: #999;
+}
+
+.content .s-text:focus {
+    border-color: #38f;
+}
+
+
+/*百度一下按钮*/
+
+.content .s-btn {
+    float: left;
+}
+
+.content .s-submit {
+    width: 100px;
+    height: 32px;
+    border: 0;
+    border-radius: 0;
+    background: #3385ff;
+    color: #fff;
+    padding: 0;
+    font-size: 15px;
+    outline: 0;
+    cursor: pointer;
+}
+
+
+/*底部css*/
+
+footer {
+    width: 600px;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    margin-left: -300px;
+    text-align: center;
+}
+
+footer p a {
+    margin-left: 4px;
+    margin-right: 4px;
+    color: black;
+}
+
+footer p a:hover {
+    color: blue;
+}
+
+footer img {
+    width: 50px;
+}

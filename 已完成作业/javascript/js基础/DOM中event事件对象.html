@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>DOM中的event事件对象</title>
+</head>
+<body>
+  <div>
+  	<button  id="btn1">点击</button>
+  </div>
+  
+  <a href="http://www.baidu.com" id="myLink">百度</a>
+  <script type="text/javascript">
+  	   var btn1=document.getElementById("btn1");
+  	   btn1.onclick=function(event){//DOM0级事件
+  	   	alert(event.type);//事件行为click
+  	   	alert(event.target);//目标是button，
+  	   	alert(event.target.id);//得到button的id
+  	   }
+  	   btn1.addEventListener("click",function(){
+  	   	       alert(event.type);
+  	   	       alert(event.target);
+  	   	       alert(event.target.id);
+               event.stopPropagation();//阻止事件冒泡继续传播，如button外边的div也也有事件时就可以将其阻止
+  	   },false);//2级事件
+
+  	   var myLink =document.getElementById("myLink");
+  	   myLink.onclick=function(event){
+          event.preventDefault();//取消本身的默认行为，a链接不能链接百度了
+  	   }
+
+
+
+  </script>
+</body>
+</html>

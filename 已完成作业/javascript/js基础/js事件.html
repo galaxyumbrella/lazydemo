@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>多级事件（包括ie事件和其他浏览器事件）</title>
+</head>
+
+<body>
+    <button id="myBtn" class="btn">dom2级事件</button>
+    <!-- 其他浏览器事件 -->
+    <script type="text/javascript">
+    var myBtn = document.getElementById("myBtn");
+    // var btn= document.getElementsByClassName("btn")[0];
+    // console.log(btn);
+    myBtn.addEventListener("click", function() {
+        alert(this.id);
+    }, false); //false是指冒泡的方式处理，true是捕获的方式
+    myBtn.addEventListener("click", sayHi, false);
+    function sayHi() {
+        alert("hello");
+    } //这种直接命名的函数可以在任何地方都能被调用 ，而以var a=function(){}的方式命名的函数需要在被使用前就要出现。
+    // myBtn.removeEventListener("click",sayHi,false);//移除事件
+    </script>
+    <!-- ie事件只对ie10以内浏览器有效,ie8及更早版本只支持冒泡事件-->
+    <!--    <script type="text/javascript">
+      	  var myBtn=document.getElementById("myBtn");
+      	  myBtn.attachEvent("onclick",function(){alert("hello")});
+      	  myBtn.attachEvent("onclick",sayHi);
+      	  function sayHi(){
+      	  	alert("hi");
+      	  }
+      	  //myBtn.detachEvent("onclick",sayHi);//移除事件
+      </script> -->
+    <!-- 跨浏览器事件处理程序 -->
+    <button id="myBtn2" class="btn2">跨浏览器事件</button>
+    <script type="text/javascript">
+    var myBtn2 = document.getElementById("myBtn2");
+    
+    function addHandler() {
+        if (myBtn2.addEventListener) { //ie9和其他绝大部分浏览器
+            myBtn2.addEventListener("click", clickMe, false);
+        } else if (myBtn2.attachEvent) { //ie 事件处理程序
+            myBtn2.attachEvent("onclick", clickMe);
+        } else {
+            myBtn2.onclick = clickMe; //DOM0级事件处理程序，支持所有浏览器
+        }
+         
+    }
+     
+     function removeHandler() {
+        if (myBtn2.removeEventListener) { //ie9和其他绝大部分浏览器
+            myBtn2.removeEventListener("click", clickMe, false);
+        } else if (myBtn2.detachEvent) { //ie 事件处理程序
+            myBtn2.detachEvent("onclick", clickMe);
+        } else {
+            myBtn2.onclick = null; //DOM0级事件处理程序，支持所有浏览器
+        }
+      
+    }
+     function clickMe() {
+            alert("点击我");
+        }
+    addHandler();
+    // removeHandler();//移除绑定事件
+    </script>
+</body>
+
+</html>

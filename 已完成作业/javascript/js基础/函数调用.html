@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>函数调用</title>
+</head>
+
+<body>
+
+    <a href="javascript:plus();">1111</a>
+    <button onclick="obj.sayHi()">dianji</button>
+
+
+
+    <script type="text/javascript">
+    var plus = function() {
+        var a = 1;
+        var b = 2;
+        var s = a + b;
+        alert(s);
+    }
+    // plus();
+
+    // function plus() {
+    //     var a = 1;
+    //     var b = 2;
+    //     var s = a + b;
+    //     alert(s);
+    // }
+    // plus();
+
+    var obj={
+    	name:"zhangsan",//此处是逗号！！
+    	sayHi:function(){
+    		alert("hello");
+    	}
+    }
+    alert(obj.name)
+    alert(obj["name"]);//有引号
+    alert(obj);
+    // function sayHi(name,age){
+    // 	var msg=name+",hello!年龄是："+age;
+    // 	alert(msg);
+    // }
+    // sayHi("Lucy",16);
+
+      function sum(){
+         // var s=arguments[0]+arguments[1]+arguments[2];
+         var s=0;//初始化，
+         for(var temp in arguments){
+         	s=s+arguments[temp];//等于s += arguments[temp]
+         }
+         // alert(s);
+      }
+      // sum(1,2,3);
+      // sum(1,2,3,4);
+
+     
+    </script>
+</body>
+
+</html>

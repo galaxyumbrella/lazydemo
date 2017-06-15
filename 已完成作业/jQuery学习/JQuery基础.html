@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>基础</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript">
+    // $()返回的是数组 
+    // $(document).ready(function(){});
+    $(function() {
+        // //第一种点击写法
+        // $("#test").click(function(e) {
+        //     console.log(document.getElementsByClassName("numbtn")[0].className);
+        //     console.log($(".numbtn")[0].className);
+        //     console.log(document.getElementById("test").id); //test
+        //     console.log($("#test")[0].id); //test
+        //     alert("第一种点击写法");
+        // });
+        // //第二种点击写法
+        // $(".numbtn").on("click", function() {
+        //     console.log($(".numbtn")); //返回的是数组
+        //     console.log($(".numbtn")[0]); //返回的是整个<div id="test" class="numbtn">12344</div>
+           
+        // });
+
+        //第三种 当动态添加的内容又要发生事件时用  例如给test加一个button点击发生事件
+        $("#addbtn").click(function(event) {
+            $("#test").append('<div style="width:100px;"><button id="dongtaibtn">1</button><button>2</button></div>'); //动态添加btn
+            // $("#test").css("color","red");//动态更改css字体颜色
+            $("#test").css({//动态添加一批css样式
+                      "color":"red",
+                      "background":"yellow",
+                      "cursor":"pointer"
+            });
+            $("#test").removeClass().addClass("clickme");
+        });
+        
+
+        $(".clickme").click(function(event) {
+            alert("我是事件委托的class");
+        });
+        $("#test").on("click", "#dongtaibtn", function() { 
+            console.log("我是动态添加的btn");
+            alert("我是动态添加的btn");
+        });
+
+    //     $("#test").each(function(e){
+    //     	console.log($(this));
+    //     	console.log(this);
+    //     	console.log(e);
+    //         console.log($(this).attr("data-name"));//拿到div属性值
+    //     });
+
+    //     //事件委托
+    //     // $("#test").delegate('#dongtaibtn', 'click', function(event) {//与上边动态方法虽然相同作用但参数写法顺序不同
+    //     //    console.log("我是事件委托的btn");
+    //     //     alert("我是事件委托的btn");
+    //     // });
+    //     $("#clickmebtn").click(function(){
+    //     	var a=jQuery.Event("myevent");
+    //         $("#clickmebtn").trigger(a);
+    //     });
+         
+    //      $("#clickmebtn").on("myevent",function(e){
+    //      	console.log("自定义事件");
+    //      	console.log(e);
+    //      });
+
+    });
+    </script>
+</head>
+<div id="test" class="numbtn" data-name="sgdg">12344</div>
+<div class="numbtn">111</div>
+<button id="addbtn">动态添加btn</button>
+<button id="clickmebtn">222</button>
+<body>
+</body>
+
+</html>

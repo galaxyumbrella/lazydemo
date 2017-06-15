@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>js动态添加html内容</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="dongtaiaddhtml.js"></script>
+    <style type="text/css">
+    .news-lists {
+        margin: 0;
+        padding: 0 8px;
+    }
+    
+    .newslist {
+        display: flex;
+        display: -webkit-flex;
+        display: -moz-flex;
+        border-bottom: 1px solid #e6e6e6;
+        margin-top: 10px;
+    }
+    
+    .newsimg {
+        flex: 1;
+        -webkit-flex: 1;
+        -moz-flex: 1;
+    }
+    
+    .newsimg img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .newscontent {
+        flex: 2;
+        -webkit-flex: 2;
+        -moz-flex: 2;
+    }
+    
+    .newscontent h1 {
+        display: inline-block;
+        font-size: 13px;
+        font-weight: bold;
+        margin: 10px 10px;
+    }
+    
+    .newscontent div {
+        margin: 10px 10px;
+    }
+    
+    .newscontent span:nth-child(2) {
+        margin-left: 8px;
+        border: 1px solid #ff0000;
+        border-radius: 2px;
+        color: #ff0000;
+    }
+    </style>
+</head>
+
+<body>
+    <article class="news-main">
+        <ul class="news-lists">
+            <!-- 这里js代码自动添加新闻 -->
+            <!-- <li class="news-list">
+                    <div class="news-img">
+                        <img src="img/1.jpg">
+                    </div>
+                    <div class="news-content">
+                        <h1>墨西哥男子进武当山习武十年墨西哥男子进武当山习武十年</h1>
+                        <div>
+                            <span class="news-time">2017-04-28</span>
+                            <span class="news-src">新闻推荐</span>
+                        </div>
+                    </div>
+                </li> -->
+        </ul>
+    </article>
+</body>
+
+</html>

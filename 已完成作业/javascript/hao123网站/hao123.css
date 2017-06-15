@@ -1,0 +1,669 @@
+html,body,div,span,applet,object,iframe,h1,h2,
+h3,h4,h5,h6,p,blockquote,a,abbr,acronym,address,
+big,cite,del,dfn,em,img,ins,kbd,q,s,samp,small,
+strike,strong,sub,sup,tt,var,b,u,i,dl,dt,
+dd,ol,ul,li,fieldset,form,label,legend,table,caption,
+tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,
+embed,figure,figcaption,footer,header,hgroup,input,menu,
+nav,output,section,summary,time,mark,audio,video {
+border: 0;
+margin: 0;
+padding: 0;
+vertical-align: baseline;
+-webkit-box-sizing: border-box; /* Safari/Chrome 等 WebKit 内核浏览器 */
+-moz-box-sizing: border-box; /* Firefox 等 Gecko 内核浏览器 */
+box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:visited {
+    color: #333;
+}
+
+li {
+    display: inline-block;
+    list-style: none;
+}
+
+body {
+    width: 100%;
+    background: #f7f7f8;
+}
+
+#skin-items {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    z-index: 100;
+    top: 0;
+    padding-top: 10px;
+}
+
+#skin-items-btn {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#close-changeskin {
+    width: 100px;
+    position: relative;
+    float: right;
+    margin: 0 15px 0 5px;
+    height: 30px;
+    letter-spacing: 8px;
+    cursor: pointer;
+}
+
+#skin-items ul {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    display: -webkit-flex;
+}
+
+#skin-items ul li {
+    flex: 1;
+    -webkit-flex: 1;
+    margin: 5px 10px 5px 10px;
+    padding: 0;
+    opacity: 0.7;
+    cursor: pointer;
+    border: 1px solid #333;
+    position: relative;
+}
+
+#skin-items ul li:hover {
+    opacity: 1;
+}
+
+#skin-items ul li img {
+    position: relative;
+    top: 2px;
+}
+
+.wrapper {
+    width: 100%;
+    min-width: 1200px;
+    background: #fff;
+    position: relative;
+}
+
+
+/*改变背景图片*/
+
+#default-bg {
+    background: #fff;
+}
+
+#ali-bg {
+    background: url(img/ali-bg.jpg) no-repeat;
+    background-size:100% auto;
+}
+
+#spring-bg {
+    background: url(img/spring-bg.jpg) no-repeat;
+    background-size:100% auto;
+}
+
+#clover-bg {
+    background: url(img/clover-bg.jpg) no-repeat;
+    background-size:100% auto;
+}
+
+#pugongying-bg {
+    background: url(img/pugongying-bg.jpg) no-repeat;
+    background-size:100% auto;
+}
+
+#purplemagic-bg {
+    background: url(img/purplemagic-bg.jpg) no-repeat;
+    background-size:100% auto;
+}
+
+#paperplane-bg {
+    background: url(img/paperplane-bg.jpg) no-repeat;
+    background-size:100% auto;
+}
+
+.content {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+/*顶部css*/
+
+.header {
+    position: relative;
+    top: 15px;
+}
+
+.header-logo {
+    margin-left: 15px;
+}
+
+.header-item {
+    position: absolute;
+    right: 50px;
+    top: 0;
+}
+
+.header-item ul li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+#changeskin-btn {
+    border: 0;
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+/*百度搜索框*/
+
+.baidu {
+    position: relative;
+    margin-top: 35px;
+    height: 56px;
+    width: 100%;
+}
+
+.baidu-center {
+    width: 820px;
+    height: 56px;
+    margin: 0 auto;
+}
+
+.baidu-logo {
+    display: inline-block;
+    margin: 0 15px 0 15px;
+}
+
+.baidu-logo span {
+    background: url("img/baidulogo.png") no-repeat center;
+    display: inline-block;
+    width: 120px;
+    height: 39px;
+}
+
+.baidu-form {
+    display: inline-block;
+    font-size: 0;
+    text-align: center;
+    position: absolute;
+}
+
+.baidu-text {
+    width: 538px;
+    height: 44px;
+    border: 1px solid #333;
+    border-right-width: 0;
+    outline: 0;
+    font-size: 16px;
+    text-indent: 10px;
+    float: left;
+}
+
+.baidu-btn {
+    width: 118px;
+    height: 44px;
+    border: 1px solid #333;
+    font-size: 16px;
+    color: #222;
+    background: #e6e6e6;
+    cursor: pointer;
+    float: left;
+}
+
+
+/*主要内容区域*/
+
+.main {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.main div ul li a:hover {
+    color: #099e6a
+}
+
+.main-item01 {
+    width: 100%;
+    border-top: 2px solid #099e6a;
+}
+
+.main-item01 ul {
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+}
+
+.main-item01 ul li {
+    height: 38px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 38px;
+    text-align: center;
+    flex: 1;
+    -webkit-flex: 1;
+}
+
+.main-item01 ul li:nth-child(1):hover {
+    color: #fff;
+}
+
+.main-item02 ul {
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    border: solid 1px #ade0c1;
+}
+
+.main-item02 ul li {
+    height: 38px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 38px;
+    text-align: center;
+    flex: 1;
+    -webkit-flex: 1;
+}
+
+.main-item03 {
+    margin-top: 10px;
+}
+
+.main-item03-left {
+    width: 280px;
+    height: 1000px;
+    float: left;
+    border: 1px solid #cecece;
+    position: relative;
+    padding: 9px 0 0 15px;
+}
+
+.main-item03-left ul li {
+    width: 128px;
+    margin-bottom: 5px;
+}
+
+.main-item03-left ul li i {
+    display: inline-block;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    position: relative;
+}
+
+.mil-tv {
+    background: url("img/logos.png") no-repeat center;
+    background-position: -354px -525px;
+}
+
+.mil-game {
+    background: url("img/logos.png") no-repeat center;
+    background-position: -507px -478px;
+}
+
+.mil-film {
+    background: url("img/logos.png") no-repeat center;
+    background-position: -563px -525px;
+}
+
+.mil-cartoon {
+    background: url("img/logos.png") no-repeat center;
+    background-position: -99px -561px;
+}
+
+.mil-news {
+    background: url("img/logos.png") no-repeat center;
+    background-position: -247px -525px;
+}
+
+.mil-lvyou {
+    background: url("img/logos.png") no-repeat center;
+    background-position: -96px -307px;
+}
+
+.mil-caipiao {
+    background: url("img/logos.png") no-repeat center;
+    background-position: -235px -560px;
+}
+
+.mil-gaoxiao {
+    background: url("img/logos.png") no-repeat center;
+    background-position: -163px -157px;
+}
+
+.mil-tejia {
+    background: url("img/logos.png") no-repeat center;
+    background-position: -326px -280px;
+}
+
+.mil-gupiao {
+    background: url("img/logos.png") no-repeat center;
+    background-position: -431px -424px;
+}
+
+.split {
+    color: #999;
+    padding: 0 5px;
+}
+
+.main-item03-right {
+    width: 900px;
+    height: 280px;
+    float: right;
+    border: 1px solid #adb;
+    margin-bottom: 10px;
+}
+
+.mir-row-01 {
+    margin-bottom: 10px;
+}
+
+.mir-row-01 ul li {
+    width: 139px;
+    padding: 6px 0 4px 20px;
+    position: relative;
+}
+
+.logo-baidu {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("img/logo.png") no-repeat center;
+    background-position: 2px -198px;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+}
+
+.logo-sina {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("img/logo.png") no-repeat center;
+    background-position: 2px -278px;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+}
+
+.logo-sohu {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("img/logo.png") no-repeat center;
+    background-position: 2px -318px;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+}
+
+.logo-tengxun {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("img/logo.png") no-repeat center;
+    background-position: 2px -38px;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+}
+
+.logo-wangyi {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("img/logo.png") no-repeat center;
+    background-position: 2px -157px;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+}
+
+.logo-youku {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("img/logo.png") no-repeat center;
+    background-position: 2px -398px;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+}
+
+.mir-row-02 {
+    margin-bottom: 5px;
+}
+
+.mir-row-02 ul li {
+    width: 139px;
+    padding: 6px 0 4px 9px;
+    position: relative;
+    text-align: center;
+    letter-spacing: 8px;
+}
+
+.mir-row-03 ul li {
+    width: 139px;
+    padding: 6px 0 4px 20px;
+    position: relative;
+}
+
+.logo-caipiao {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("img/logo.png") no-repeat center;
+    background-position: 2px -559px;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+}
+
+.logo-fenghuang {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("img/logo.png") no-repeat center;
+    background-position: 2px -238px;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+}
+
+.logo-taobao {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("img/logo.png") no-repeat center;
+    background-position: 2px -358px;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+}
+
+.logo-game {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("img/game.png") no-repeat center;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+}
+
+.logo-4399 {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("img/logo.png") no-repeat center;
+    background-position: 2px 2px;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+}
+
+.logo-hao123film {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("img/logo.png") no-repeat center;
+    background-position: 2px -640px;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+}
+
+.mir-row-04 ul li {
+    width: 139px;
+    padding: 6px 0 4px 20px;
+    position: relative;
+}
+
+.jingdong {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("img/jingdong.png") no-repeat center;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+}
+
+.suning {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("img/suning.png") no-repeat center;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+}
+
+.tejia {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("img/tejia.png") no-repeat center;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+}
+
+.jinritejia {
+    display: inline-block;
+    width: 59px;
+    height: 16px;
+    background: url("img/jinritejia.png") no-repeat center;
+    position: relative;
+    top: 3px;
+}
+
+.tiyu {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("img/tiyu.png") no-repeat center;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+}
+
+.qiche {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("img/logo.png") no-repeat center;
+    background-position: 2px -518px;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+}
+
+.juhuasuang {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("img/juhuasuang.png") no-repeat center;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+}
+
+.mir-row-05 ul li {
+    width: 139px;
+    padding: 6px 0 4px 20px;
+    position: relative;
+}
+
+.tongcheng {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("img/58tongcheng.png") no-repeat center;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+}
+
+.fangtianxia {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("img/fangtianxia.png") no-repeat center;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+}
+
+.xiecheng {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("img/xiecheng.png") no-repeat center;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+}
+
+.lvyou {
+    color: #f50;
+}
+
+.mir-row-06 ul li {
+    width: 139px;
+    padding: 6px 0 4px 20px;
+    position: relative;
+}
+
+.mir-row-07 ul li {
+    width: 139px;
+    padding: 6px 0 4px 20px;
+    position: relative;
+}
+
+.guesslike-block {
+    width: 900px;
+    height: 150px;
+    float: right;
+    border: 1px solid #cecece;
+    margin-bottom: 10px;
+}
+
+.main-item04-right {
+    width: 900px;
+    height: 500px;
+    float: right;
+    border: 1px solid #cecece;
+}
